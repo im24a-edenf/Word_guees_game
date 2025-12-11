@@ -27,7 +27,8 @@ class SocketService {
    * Establishes the WebSocket connection to the server.
    */
   public connect(url?: string): Promise<void> {
-    const host = url || `ws://${window.location.hostname}:8080`;
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const host = url || `${protocol}//${window.location.host}`;
     return new Promise((resolve, reject) => {
       this.ws = new WebSocket(host);
 
