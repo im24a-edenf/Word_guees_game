@@ -11,13 +11,14 @@
     "server": "node server.js"
   },
   "dependencies": {
+    "@google/genai": "^1.33.0",
+    "lucide-react": "^0.560.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "lucide-react": "^0.560.0",
-    "@google/genai": "^1.33.0",
     "ws": "^8.16.0"
   },
   "devDependencies": {
+    "@types/node": "^25.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.2.1",
