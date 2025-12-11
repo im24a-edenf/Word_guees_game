@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Word Guess",
+  "description": "A real-time multiplayer-style word guessing game powered by Gemini AI. Guess the hidden word as clues appear every 15 seconds.",
+  "requestFramePermissions": []
+}
