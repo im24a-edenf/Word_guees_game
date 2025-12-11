@@ -146,17 +146,3 @@ app.get('*', (req, res) => {
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-/**
- * Helper to send a message to everyone in a room except the sender.
- */
-function broadcastToRoom(roomId, type, payload, excludeId = null) {
-  const room = rooms.get(roomId);
-  if (!room) return;
-
-  room.players.forEach(p => {
-    if (p.id !== excludeId && p.ws && p.ws.readyState === 1) {
-      p.ws.send(JSON.stringify({ type, payload }));
-    }
-  });
-}
